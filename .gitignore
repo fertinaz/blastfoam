@@ -36,5 +36,14 @@
 # the html preview file
 *.html
 
+# log files
+log.*
+*.log
+
+# compilation related files
+*.dep 
+lnInclude/
+linux64*/
+
 .DS_Store
 
