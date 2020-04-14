@@ -6,8 +6,10 @@ cd ${0%/*} || exit 1    # run from this directory
 
 # (wmake libso BCs && wmake && wmake rhoCentralDyMFoam)
 
-(cd src && wmake all)
+cd src 
 
-wmake all applications
+wmake all 2>&1 | tee log.wmake.all
+
+wmake all applications 2>&1 | tee log.wmake.all.applications
 
 # ----------------------------------------------------------------- end-of-file
